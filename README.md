@@ -31,12 +31,15 @@ Bitte hinterlasst mir eine kurze Nachrichten per Issue, im [ioBroker-Forum als P
 - Die beiden Dateien aus dem Github Repo herunterladen in z.B. /etc/scripts  
   `mkdir /etc/scripts`  <- Wenn Ihr einen eigenen Ordner wollt, alternativ mit `pwd` prüfen in welchen Ordner ihr euch befindet und diesen merken.  
   `cd /etc/scripts/`    <- In den Ordner wechseln  
-  `wget xxx`  
-  `wget yyy`  
+  `wget https://raw.githubusercontent.com/Schnup89/ioBroker_Owlet-SmartSocks/main/checkowlet.sh`  
+  `wget https://raw.githubusercontent.com/Schnup89/ioBroker_Owlet-SmartSocks/main/owletio.py`  
 - Solltet ihr /etc/scripts verwenden, dann muss die Datei checkowlet.sh nicht angepasst werden, falls doch die Ordnerangaben darin anpassen  
 - In der Datei owletio.py unter Konfiguration die Daten eintragen:  
   `nano owletio.py` <- Werte anpassen und mit STRG+X und einem folgenden Y die Datei speichern.  
-  Ihr könnt für die URL http://127.0.0.1:8087 stehen lassen solltet ihr auf dem ioBroker Host arbeiten, ansonsten hier die IP oder Name des ioBroker eintragen.  
+  Ihr könnt für die URL http://127.0.0.1:8087 stehen lassen solltet ihr auf dem ioBroker Host arbeiten, ansonsten hier die IP oder Name des ioBroker eintragen.
+- Crontab Eintrag hinzufügen:
+  `crontab -e`
+  `* * * * * /etc/scripts/checkowlet.sh >> /tmp/checkowlet.log 2>&1`
 
 
 # Paramter/States
