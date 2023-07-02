@@ -21,7 +21,8 @@ Bitte hinterlasst mir eine kurze Nachrichten per Issue, im [ioBroker-Forum als P
 # Installation
 *Auf dem ioBroker*
 - "Einfache RESTful API" bzw. "Simple-API" ioBroker Adapter installieren und aktivieren
-- Ein Ordner unter Objekte anlegen, in meinem Beispiel wurde "admin.0.smartsocks" angelegt, könnt ihr die Werte die abgerufen werden sollen anlegen.
+- Ein Ordner unter Objekte anlegen, in meinem Beispiel wurde "admin.0.smartsocks" angelegt
+- In diesem Ordner müssen die State ID's mit den Parameter der Cloud übereinstimmen.
   Siehe dazu Kapitel "Parameter/States"
   
   
